@@ -7,4 +7,4 @@ line={"R":R,"NV":NV,"NE":NE,"D":D,"result":res,"elapsed":round(time.time()-t,1)}
 line.update(info)
 if res=="SAT":
     line["verify"]=exact_verify(E,R,NV,D); line["E"]=E
-print(json.dumps(line,ensure_ascii=False)[:1200])
+print(json.dumps(line,ensure_ascii=False)[:1500])
