@@ -26,11 +26,15 @@ The benchmark ships three *open* conjecture tasks. We took them on:
 | `alon-jaeger-tarsi` | faithful (`p` prime, `p ≥ 5`; `n=0` vacuous) | Nagy–Pach cover `p > 61, p ≠ 79`; `p ∈ {5,…,61} ∪ {79}` open | literature only |
 | `bin-packing-mirup` | faithful (integer sizes lossless, `Nat.ceil` matches the copy semantics) | **refuted** — OpenAI preprint 2026-09-24 (`OPT > B + c` with `OPT_LP = B`) | **kernel-checked tightness of the `+1`** on `instC`; 39,150-instance search, 0 hits |
 
-### The verified result
+### The kernel certificate
+
+**Status: written, not yet compiled here** (see `STATUS.md` and `docs/environment.md` — this
+sandbox cannot fetch the ~7 GB mathlib olean cache). The block below is what
+`lean/Task/Basic.lean` contains; its arithmetic was cross-checked by an independent exact
+LP/ILP solver, and it uses no `axiom`, no `native_decide`, no `sorry`:
 
 `lean/Task/Basic.lean` adds a `namespace InstC` block **after the fixed part** (the task file is
-otherwise untouched) that proves, inside the task's own definitions and with no `axiom`,
-no `native_decide`, no `sorry`:
+otherwise untouched) stating, inside the task's own definitions:
 
 * `lpVal instC 81 = 3` — via a primal natural-number cover certificate (`D = 3`, 8 patterns,
   total weight 9) and a dual natural-number certificate (`D = 28`, weights

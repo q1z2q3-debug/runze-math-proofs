@@ -1,4 +1,4 @@
-# TCSExam「开放猜想」实做记录：定位、核查、复算与机检验证
+# TCSExam「开放猜想」实做记录：定位、核查、复算与 Lean 证书（编译受阻）
 
 > 对象：arXiv:2611.07962（TCSExam 基准论文）＋随附题包 `TCSExam_开放猜想原始题面.zip`
 > 日期：2026-11-15　｜　全部数值可复现（脚本与日志随附）
@@ -11,7 +11,7 @@
 |---|---|---|---|
 | `aaronson-ambainis` | 忠实（n=0 退化被假设排除，bounded 条件必需） | **已被证明**（arXiv:2611.09773，2026-11-06；Aaronson 博客 2026-11-10 确认） | 只做文献定位；形式化不可行（研究级体量） |
 | `alon-jaeger-tarsi` | 忠实（素数域 p≥5，n=0 平凡真） | Nagy–Pach 覆盖 p>61 且 p≠79；余 p∈{5,…,61}∪{79} 未解 | 只做文献定位；已知可借鉴范式＝Astra 的 F5/n≤9 机检 |
-| `bin-packing-mirup` | 忠实（整数化无损、⌈·⌉ 与个体拷贝语义一致、n≤2 平凡） | **已被反证**（OpenAI 2026-09-24 预印本 + Lean 形式化文档 118） | **在题目定义层内机检验证了「+1 恰好紧」**（LP=3、OPT=4、3 箱不可行），并做了 39,150 例计算搜索 |
+| `bin-packing-mirup` | 忠实（整数化无损、⌈·⌉ 与个体拷贝语义一致、n≤2 平凡） | **已被反证**（OpenAI 2026-09-24 预印本 + Lean 形式化文档 118） | 写出「+1 恰好紧」的内核证书（LP=3、OPT=4、3 箱不可行）；**本沙箱内未能编译**（见 §7）；另做 39,150 例计算搜索 |
 
 **诚实的结论**：满分要求是把 `conj` 或 `refuted` 槽填满（all-or-nothing）。三道题里唯一有可能填 `refuted` 的是 MIRUP，但现有公开反例的构造参数（P0=100^11、K≈1.25×10^13、尺寸分母 ≈(10^15)^m）**不存在可内核判定的显式实例**，而槽位要的正是 `Fin n → ℕ` 的显式尺寸表。所以本次**没有拿到 1.0**；本报告的价值在于：把「为什么拿不到」量化到参数级，并把能机检的部分真机检了。
 
@@ -194,7 +194,7 @@ ceil(LP)+1 = 4
 | `mirup_tight` | **`OPT = ⌈LP⌉ + 1`** | 改写 |
 | `lpVal_lt_optNumber` | `LP < OPT`（实数层） | 改写 |
 
-编译环境严格对齐题包：工具链 `leanprover/lean4:v4.33.0-rc1`，mathlib 取同 tag（`79d0395a…`），其余依赖 rev 沿用题包自带 `lake-manifest.json`。编译与公理审计结果见 §7。
+**必须如实标注的一点**：证书代码是按题目定义区逐条写好的，但**在本沙箱里没有跑通编译**——不是证明有问题，而是 Lean 运行环境拿不到 mathlib olean（见 §7 与 `docs/environment.md`）。因此上表的口径是「证书已写出、算术已由独立的精确 LP/ILP 复算交叉确认，等待内核复跑」，不是「已机检通过」。
 
 **这组定理的意义**：它把「MIRUP 的常数 1 不可改进」这件事变成了内核事实，也验证了题目定义区的两个证书桥确实可用——也就是说，**如果**有人造出 `OPT ≥ ⌈LP⌉+2` 的实例，代码骨架已经现成，只差实例和 `¬PacksIn` 的论证。
 
@@ -253,6 +253,17 @@ cd work/app433 && lake build Task
 1. `elan toolchain install` 反复失败（partial file / release 解析错误）→ 直接下 GitHub release 的 `lean-4.33.0-rc1-linux.tar.zst`，用 `pip install zstandard` 解包（系统无 `zstd`、apt 也没有该包）；
 2. 先试过 mathlib **master + 4.36.0-rc2**：`lake build` 在 Batteries 上大面积报错（`UInt8.max_def has already been declared`、`BitVec.toNat_pow` 重复声明、`dif_pos` 弃用告警「updated constant has a different type」）——**工具链与 Batteries rev 不匹配**。教训：mathlib 必须用与题包 `lean-toolchain` 同 tag 的版本，别图新；
 3. `/opt` 在 9.8G 根分区，7.2G mathlib 缓存直接撑爆（`No space left on device` 会伪装成「解包不完整」，表现为 `libInit_shared.so` 缺失）→ 库全部放 `/home/user` 大分区。
+
+### 7.1 编译状态：受阻，不是失败在证明本身
+
+本沙箱（2 核、根分区仅 9.8 GB、经代理出网）内，两条配置各卡在一处：
+
+| 配置 | 卡点 | 现象 |
+|---|---|---|
+| A：`v4.33.0-rc1` + mathlib 同 tag | 缓存工具 | `lake exe cache get` 60–240 s 内**零输出、零网络、零落盘**（`/proc/<pid>/io` 不走、`~/.cache/mathlib` 不生成）；直接调 `cache` 二进制则报 `leantar not found in Lean sysroot`（需人工补 `LEAN_SYSROOT`）。`import Mathlib` 在固定区里，无法用「缩减 import」绕开。 |
+| B：`v4.36.0-rc2` + mathlib master | 依赖版本 | 若沿用题包 4.33 时代的 `lake-manifest.json`，Batteries 大面积报 `UInt8.max_def has already been declared` / `BitVec.toNat_pow`（工具链与 batteries rev 不匹配）；换用 master 自带 manifest 则一致性没问题，但仍要先拿到 7 GB olean。 |
+
+结论：**证书代码可以直接在题包原环境（有缓存/能联网的机器）里 `lake build Task` 复跑**，本沙箱只差这一步环境。仓库 `lean/` 目录保留了两套配置的 `lakefile` 说明与踩坑记录（`docs/environment.md`），复现者不必重走弯路。
 
 ---
 
