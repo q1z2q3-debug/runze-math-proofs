@@ -1,0 +1,72 @@
+[
+ {
+  "r": 3,
+  "D": 4,
+  "E": 9,
+  "margin": 0,
+  "vertices_per_part_min": 3
+ },
+ {
+  "r": 4,
+  "D": 5,
+  "E": 16,
+  "margin": 0,
+  "vertices_per_part_min": 4
+ },
+ {
+  "r": 5,
+  "D": 6,
+  "E": 25,
+  "margin": 0,
+  "vertices_per_part_min": 5
+ },
+ {
+  "r": 6,
+  "D": 7,
+  "E": 36,
+  "margin": 0,
+  "vertices_per_part_min": 6
+ },
+ {
+  "r": 7,
+  "D": 8,
+  "E": 49,
+  "margin": 0,
+  "vertices_per_part_min": 7
+ },
+ {
+  "r": 8,
+  "D": 9,
+  "E": 64,
+  "margin": 0,
+  "vertices_per_part_min": 8
+ },
+ {
+  "r": 9,
+  "D": 10,
+  "E": 81,
+  "margin": 0,
+  "vertices_per_part_min": 9
+ },
+ {
+  "r": 10,
+  "D": 11,
+  "E": 100,
+  "margin": 0,
+  "vertices_per_part_min": 10
+ },
+ {
+  "r": 11,
+  "D": 12,
+  "E": 121,
+  "margin": 0,
+  "vertices_per_part_min": 11
+ },
+ {
+  "r": 12,
+  "D": 13,
+  "E": 144,
+  "margin": 0,
+  "vertices_per_part_min": 12
+ }
+]

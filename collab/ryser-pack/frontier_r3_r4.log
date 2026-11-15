@@ -1,0 +1,9 @@
+== 3 3 9 4
+python3: can't open file '/tmp/ryser_pack/case.py': [Errno 2] No such file or directory
+{"result":"TIMEOUT"}
+== 4 4 16 5
+python3: can't open file '/tmp/ryser_pack/case.py': [Errno 2] No such file or directory
+{"result":"TIMEOUT"}
+== 3 3 9 4
+{"R": 3, "NV": 3, "NE": 9, "D": 4, "result": "UNSAT", "elapsed": 0.026516199111938477, "vars": 747, "clauses": 2016}
+== 4 4 16 5

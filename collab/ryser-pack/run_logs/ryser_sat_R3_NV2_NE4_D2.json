@@ -1,0 +1,60 @@
+{
+ "params": {
+  "R": 3,
+  "NV": 2,
+  "NE": 4,
+  "D": 2
+ },
+ "result": "SAT",
+ "info": {
+  "elapsed": 3.0040740966796875e-05,
+  "vars": 102,
+  "clauses": 252
+ },
+ "verify": {
+  "NE": 4,
+  "R": 3,
+  "NV": 2,
+  "D": 2,
+  "dmax": 2,
+  "distinct": true,
+  "intersecting": true,
+  "nu": 1,
+  "tau": 2,
+  "counting_lower": 2,
+  "ryser_rhs": 2,
+  "ryser_fails": false,
+  "min_cover": [
+   [
+    2,
+    0
+   ],
+   [
+    2,
+    1
+   ]
+  ]
+ },
+ "edges": [
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   1,
+   1,
+   0
+  ],
+  [
+   1,
+   0,
+   1
+  ],
+  [
+   0,
+   1,
+   1
+  ]
+ ]
+}

@@ -1,0 +1,88 @@
+{
+  "task": "ryser-conjecture",
+  "slot": "refuted",
+  "solved": 0,
+  "theorem_A": "reduction to degree-bounded intersecting family (complete proof)",
+  "theorem_B": "C(|E|,2) <= r*(floor(|E|/D)*C(D,2)+C(|E| mod D,2)); k=1 => D>=r+1, |E|>=r^2",
+  "minD": {
+    "6": 7,
+    "7": 8,
+    "8": 9,
+    "9": 10
+  },
+  "sat_verdicts": [
+    {
+      "R": 3,
+      "NV": 2,
+      "NE": 4,
+      "D": 2,
+      "result": "SAT",
+      "elapsed": 0.0,
+      "vars": 102,
+      "clauses": 252
+    },
+    {
+      "R": 6,
+      "NV": 8,
+      "NE": 21,
+      "D": 4,
+      "result": "UNSAT",
+      "elapsed": 1.5,
+      "vars": 16494,
+      "clauses": 51846
+    },
+    {
+      "R": 6,
+      "NV": 10,
+      "NE": 21,
+      "D": 4,
+      "result": "UNSAT",
+      "elapsed": 1.91,
+      "vars": 20334,
+      "clauses": 64482
+    },
+    {
+      "R": 6,
+      "NV": 12,
+      "NE": 21,
+      "D": 4,
+      "result": "UNSAT",
+      "elapsed": 1.96,
+      "vars": 24174,
+      "clauses": 77118
+    },
+    {
+      "R": 6,
+      "NV": 16,
+      "NE": 21,
+      "D": 4,
+      "result": "UNSAT",
+      "elapsed": 2.19,
+      "vars": 31854,
+      "clauses": 102390
+    },
+    {
+      "R": 6,
+      "NV": 8,
+      "NE": 36,
+      "D": 7,
+      "result": "UNKNOWN(timeout)",
+      "elapsed": null,
+      "vars": 47004,
+      "clauses": 151128
+    },
+    {
+      "R": 6,
+      "NV": 8,
+      "NE": 41,
+      "D": 8,
+      "result": "UNKNOWN(timeout)",
+      "elapsed": null,
+      "vars": 60642,
+      "clauses": 195758
+    }
+  ],
+  "remaining_open": "SAT decision for r=6, D=7/|E|=36 and D=8/|E|=41 (resource-limited UNKNOWN)",
+  "lean_status": "NOT COMPILED (no lean/lake in sandbox)",
+  "calibration": "Pasch R=3 NV=2 NE=4 D=2 -> SAT, tau=2, nu=1 (tight, encoder validated)"
+}

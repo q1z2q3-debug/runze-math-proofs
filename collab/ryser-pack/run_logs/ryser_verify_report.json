@@ -1,0 +1,28 @@
+[
+ {
+  "file": "TCSExam_Ryser_\u901a\u7528\u5f52\u7ea6\u5b9a\u7406.lean",
+  "checks": {
+   "standalone_module": "PASS",
+   "fixed_zone": "N/A (standalone module, not a slot submission)",
+   "forbidden_tokens": "PASS",
+   "slot_resolved(no plain sorry)": "PASS",
+   "explicit_counterexample_instance": "N/A (conditional theorem)"
+  },
+  "submittable": true
+ },
+ {
+  "file": "TCSExam_Ryser_refuted\u69fd_\u63d0\u4ea4\u8349\u6848.lean",
+  "checks": {
+   "fixed_zone_byte_identical": "PASS",
+   "marker -- CHECKPOINT conj BEGIN": "PASS",
+   "marker -- CHECKPOINT conj END": "PASS",
+   "marker -- CHECKPOINT refuted BEGIN": "PASS",
+   "marker -- CHECKPOINT refuted END": "PASS",
+   "conj_slot_untouched": "PASS",
+   "forbidden_tokens": "PASS",
+   "slot_resolved(no plain sorry)": "FAIL (slot still contains sorry -> unresolved)",
+   "explicit_counterexample_instance": "FAIL (missing: ?edges table)"
+  },
+  "submittable": false
+ }
+]
