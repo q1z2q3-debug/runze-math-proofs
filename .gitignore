@@ -1,0 +1,11 @@
+# Lean build artifacts
+.lake/
+*.olean
+*.ilean
+*.c
+*.o
+*.trace
+# large caches
+.elan/
+.yarn/
+node_modules/

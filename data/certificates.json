@@ -1,0 +1,191 @@
+{
+ "generated_by": "bpp.py (HiGHS LP/MILP + exact Fraction simplex)",
+ "semantics": "patterns = subsets of item copies with sum <= L; configuration LP; OPT = integer optimum",
+ "instances": {
+  "instC": {
+   "sizes": [
+    4,
+    6,
+    6,
+    9,
+    16,
+    29,
+    32,
+    37,
+    40,
+    62
+   ],
+   "L": 81,
+   "n": 10,
+   "patterns": 224,
+   "volume": "241/81",
+   "lp_float": 3.000000000000001,
+   "lp_exact": "3",
+   "ceil_lp": 3,
+   "opt": 4,
+   "certificates": {
+    "primal_natcover": {
+     "denominator_D": 3,
+     "total_weight": 9,
+     "patterns_0based": [
+      [
+       0,
+       4,
+       5,
+       6
+      ],
+      [
+       2,
+       3,
+       5,
+       7
+      ],
+      [
+       1,
+       2,
+       6,
+       7
+      ],
+      [
+       1,
+       2,
+       5,
+       8
+      ],
+      [
+       3,
+       6,
+       8
+      ],
+      [
+       0,
+       7,
+       8
+      ],
+      [
+       0,
+       1,
+       3,
+       9
+      ],
+      [
+       4,
+       9
+      ]
+     ],
+     "weights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+     ],
+     "pattern_loads": {
+      "0-4-5-6": 81,
+      "2-3-5-7": 81,
+      "1-2-6-7": 81,
+      "1-2-5-8": 81,
+      "3-6-8": 81,
+      "0-7-8": 81,
+      "0-1-3-9": 81,
+      "4-9": 78
+     },
+     "meaning": "sum_p w_p * cover_p(i) >= D for every item i, total sum = 9 = 3*D  =>  lpVal <= 9/D = 3"
+    },
+    "dual_natdual": {
+     "denominator_D": 28,
+     "weights": [
+      1,
+      2,
+      2,
+      3,
+      6,
+      10,
+      11,
+      13,
+      14,
+      22
+     ],
+     "total_weight": 84,
+     "meaning": "for every pattern p: sum_{i in p} w_i <= D, and sum_i w_i = 84 = 3*D  =>  lpVal >= 84/D = 3"
+    },
+    "packing_4_bins": {
+     "assign": [
+      0,
+      0,
+      0,
+      1,
+      3,
+      0,
+      0,
+      1,
+      2,
+      3
+     ],
+     "bin_loads": [
+      77,
+      46,
+      40,
+      78
+     ],
+     "capacity": 81
+    },
+    "no_packing_3_bins": "kernel-enumerated over all 3^10 = 59049 assignments",
+    "opt_number": 4,
+    "ceil_lp": 3,
+    "gap_opt_minus_ceil_lp": 1
+   },
+   "exact_dual_weights_over_28": [
+    1,
+    2,
+    2,
+    3,
+    6,
+    10,
+    11,
+    13,
+    14,
+    22
+   ],
+   "gap_opt_minus_ceil_lp": 1
+  },
+  "instB1": {
+   "sizes": [
+    6,
+    4,
+    4,
+    3,
+    3
+   ],
+   "L": 12,
+   "n": 5,
+   "patterns": 20,
+   "volume": "5/3",
+   "lp_float": 1.8000000000000003,
+   "lp_exact": null,
+   "ceil_lp": 2,
+   "opt": 2,
+   "gap_opt_minus_ceil_lp": 0
+  },
+  "instB2": {
+   "sizes": [
+    7,
+    7,
+    7,
+    7
+   ],
+   "L": 12,
+   "n": 4,
+   "patterns": 4,
+   "volume": "7/3",
+   "lp_float": 4.0,
+   "lp_exact": null,
+   "ceil_lp": 4,
+   "opt": 4,
+   "gap_opt_minus_ceil_lp": 0
+  }
+ }
+}
