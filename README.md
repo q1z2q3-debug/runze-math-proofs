@@ -28,10 +28,12 @@ The benchmark ships three *open* conjecture tasks. We took them on:
 
 ### The kernel certificate
 
-**Status: written, not yet compiled here** (see `STATUS.md` and `docs/environment.md` — this
-sandbox cannot fetch the ~7 GB mathlib olean cache). The block below is what
-`lean/Task/Basic.lean` contains; its arithmetic was cross-checked by an independent exact
-LP/ILP solver, and it uses no `axiom`, no `native_decide`, no `sorry`:
+**Status: the arithmetic is kernel-checked; the file is not built here.** `lean/core-check/`
+replays the certificates in pure Lean core (no mathlib) and compiles cleanly
+(`data/core_check.log`, `rc=0`), so the counting facts are kernel facts. What is missing is the
+`ℝ`/`ℚ` bridge: `lean/Task/Basic.lean` starts with `import Mathlib`, and this sandbox cannot
+fetch the ~7 GB olean cache (`docs/environment.md`), so the task file itself was not elaborated
+here. The block uses no `axiom`, no `native_decide`, no `sorry`:
 
 `lean/Task/Basic.lean` adds a `namespace InstC` block **after the fixed part** (the task file is
 otherwise untouched) stating, inside the task's own definitions:

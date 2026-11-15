@@ -18,6 +18,10 @@ Snapshot: 2026-11-15.
   computed (`data/gap_stats.json`) and the negative result interpreted honestly.
 * `InstC` Lean certificates written against the task's own definitions
   (`lean/Task/Basic.lean`, appended namespace, fixed part untouched).
+* **Kernel run (core layer)**: `lean/core-check/InstC_core.lean` compiles with pure Lean core
+  (`rc=0`, no `sorry`, no warnings). It kernel-decides: all 1024 masks classified by capacity,
+  every item covered `≥ 3` times, primal total `9 = 3·3`, every pattern's dual load `≤ 28`,
+  dual total `84 = 3·28`, and the explicit 4-bin packing. Log: `data/core_check.log`.
 
 ## Blocked
 
@@ -26,9 +30,9 @@ Snapshot: 2026-11-15.
   output and zero network traffic here, and mathlib cannot be built from source on 2 cores.
   Details and both attempted configurations: `docs/environment.md`.
 
-  Consequence: the `InstC` block is **written and arithmetically cross-checked by an
-  independent exact solver, but not yet kernel-checked**. Do not read it as a verified build
-  until a machine with the mathlib cache runs `lake build Task`.
+  Consequence: the `InstC` block in `Task/Basic.lean` is **written but not elaborated here**;
+  only its `ℝ`/`ℚ` bridge steps remain unchecked. The arithmetic itself is already
+  kernel-verified in `lean/core-check/` and independently by exact LP/ILP.
 
 ## Not attempted
 
