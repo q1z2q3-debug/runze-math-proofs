@@ -1,0 +1,98 @@
+<html style="margin:0;padding:0;">
+<title>三元九维 19683 认知格：三题定位与格驱动实验</title>
+<div style="font-family:-apple-system,'Noto Sans SC',system-ui,sans-serif;color:#12202b;background:#f7f8f5;padding:18px;box-sizing:border-box;width:100%;max-width:980px;margin:0 auto;line-height:1.55;">
+
+  <div style="font-size:20px;font-weight:700;letter-spacing:.5px;">三元九维 19683 认知格</div>
+  <div style="font-size:13px;color:#5a6b78;margin:6px 0 16px;">3 元 × 9 维 × 3 阶 = 3⁹ = 19683 个地址；地址 A = Σ a<sub>i</sub>3<sup>i</sup>。下图为 9 维 × 3 阶的格子，圆点标出三道题各自占据的阶位。</div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;margin-bottom:12px;">
+    <span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:50%;background:#1f6feb;display:inline-block;"></span>aaronson-ambainis</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:50%;background:#b45309;display:inline-block;"></span>alon-jaeger-tarsi</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:50%;background:#0f7b6c;display:inline-block;"></span>bin-packing-mirup</span>
+    <span style="color:#7a8892;">（同格多题时并列显示）</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:120px repeat(3,1fr);gap:5px;font-size:12.5px;">
+    <div style="font-weight:700;color:#3d4d59;padding:4px 0;">维度</div>
+    <div style="font-weight:700;text-align:center;color:#3d4d59;background:#e9ece6;border-radius:6px;padding:4px;">0 阶</div>
+    <div style="font-weight:700;text-align:center;color:#3d4d59;background:#e9ece6;border-radius:6px;padding:4px;">1 阶</div>
+    <div style="font-weight:700;text-align:center;color:#3d4d59;background:#e9ece6;border-radius:6px;padding:4px;">2 阶</div>
+
+    <!-- 象 -->
+    <div style="grid-column:1/5;font-size:12px;color:#0f7b6c;font-weight:700;margin:6px 0 0;">元一 · 象（对象是什么）</div>
+    <div style="padding:6px 2px;color:#22333f;">1 粒度</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">连续</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">离散单元</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #b45309;">个体副本 <span style="color:#b45309;">●</span><span style="color:#0f7b6c;">●</span></div>
+
+    <div style="padding:6px 2px;color:#22333f;">2 规模</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">常数级</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">多项式级</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #1f6feb;">渐近/无界 <span style="color:#1f6feb;">●●●</span></div>
+
+    <div style="padding:6px 2px;color:#22333f;">3 对称</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">无</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #1f6feb;">弱 <span style="color:#1f6feb;">●●</span></div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #b45309;">强 <span style="color:#b45309;">●</span></div>
+
+    <!-- 数 -->
+    <div style="grid-column:1/5;font-size:12px;color:#1f6feb;font-weight:700;margin:8px 0 0;">元二 · 数（怎么算、拿什么当证据）</div>
+    <div style="padding:6px 2px;color:#22333f;">4 精度</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">精确有理</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">浮点/近似</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">渐近常数</div>
+
+    <div style="padding:6px 2px;color:#22333f;">5 复杂度</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">线性</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">多项式</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #1f6feb;box-shadow:inset 0 0 0 2px #1f6feb,inset 0 0 0 3px #b45309;">指数/判定外观 <span style="color:#1f6feb;">●</span><span style="color:#b45309;">●</span></div>
+
+    <div style="padding:6px 2px;color:#22333f;">6 证书</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">构造</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #1f6feb;box-shadow:inset 0 0 0 2px #1f6feb,inset 0 0 0 3px #0f7b6c;">对偶 <span style="color:#1f6feb;">●</span><span style="color:#0f7b6c;">●</span></div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #b45309;">枚举 <span style="color:#b45309;">●</span><span style="color:#0f7b6c;">○</span></div>
+
+    <!-- 理 -->
+    <div style="grid-column:1/5;font-size:12px;color:#b45309;font-weight:700;margin:8px 0 0;">元三 · 理（凭什么成立、绕几层）</div>
+    <div style="padding:6px 2px;color:#22333f;">7 不变量</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #b45309;">计数 <span style="color:#b45309;">●</span></div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #1f6feb;box-shadow:inset 0 0 0 2px #1f6feb,inset 0 0 0 3px #0f7b6c;">体积/容量 <span style="color:#1f6feb;">●</span><span style="color:#0f7b6c;">●</span></div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">秩/代数</div>
+
+    <div style="padding:6px 2px;color:#22333f;">8 极值</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #0f7b6c;">对偶紧性 <span style="color:#0f7b6c;">●</span></div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #1f6feb;box-shadow:inset 0 0 0 2px #1f6feb,inset 0 0 0 3px #b45309;">测度/概率 <span style="color:#1f6feb;">●</span><span style="color:#b45309;">●</span></div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">拓扑/序</div>
+
+    <div style="padding:6px 2px;color:#22333f;">9 归约深度</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">直证</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;">一步归约</div>
+    <div style="text-align:center;background:#fff;border:1px solid #dde3dd;border-radius:6px;padding:6px 4px;box-shadow:inset 0 0 0 2px #1f6feb;box-shadow:inset 0 0 0 2px #1f6feb,inset 0 0 0 3px #0f7b6c;">多层 gadget <span style="color:#1f6feb;">●</span><span style="color:#0f7b6c;">●</span></div>
+  </div>
+
+  <div style="font-size:12px;color:#5a6b78;margin-top:10px;">● 为该题实际阶位；○ 表示该题在同一维另有备选阶位（如 MIRUP 的证书同时用对偶与枚举）。MIRUP 与 AA 都落在第 9 维「多层 gadget」——这正是格给出的求解指引：往第 2 阶迁移。</div>
+
+  <div style="margin-top:20px;padding:14px;background:#fff;border:1px solid #dde3dd;border-radius:8px;">
+    <div style="font-size:15px;font-weight:700;">格驱动的反例搜索（真实运行，2026-11-15）</div>
+    <div style="font-size:12.5px;color:#5a6b78;margin:4px 0 10px;">把「象 + 数」六维当参数空间：arity × band × sym × tight × mult × den = 4×3×3×3×3×3</div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      <div style="flex:1 1 150px;background:#f2f5f1;border-radius:6px;padding:10px;">
+        <div style="font-size:22px;font-weight:700;">972</div><div style="font-size:12px;color:#5a6b78;">生成的可运行子格</div>
+      </div>
+      <div style="flex:1 1 150px;background:#f2f5f1;border-radius:6px;padding:10px;">
+        <div style="font-size:22px;font-weight:700;">729</div><div style="font-size:12px;color:#5a6b78;">n ≤ 14，可精确求 LP/OPT</div>
+      </div>
+      <div style="flex:1 1 150px;background:#f2f5f1;border-radius:6px;padding:10px;">
+        <div style="font-size:22px;font-weight:700;">0</div><div style="font-size:12px;color:#5a6b78;">OPT − ⌈LP⌉ ≥ 1 的格</div>
+      </div>
+    </div>
+    <div style="font-size:12.5px;color:#3d4d59;margin-top:10px;line-height:1.6;">
+      分布：<code style="background:#eef2ec;padding:1px 5px;border-radius:4px;">{0: 729}</code>。同族的随机/扰动搜索 39,150 例同样 0 命中。
+      唯一已知的 +1 占据点 <code style="background:#eef2ec;padding:1px 5px;border-radius:4px;">instC</code>（4,6,6,9,16,29,32,37,40,62 / L=81）不在这些参数化族里 —— 它是人造的混合结构。
+      结论：+2 必须来自「多层 gadget」格，而该格的公开占据者分母量级为 (10¹⁵)<sup>m</sup>，无法写成 <code style="background:#eef2ec;padding:1px 5px;border-radius:4px;">l : Fin n → ℕ</code>。
+    </div>
+  </div>
+
+  <div style="font-size:11.5px;color:#7a8892;margin-top:12px;">分级为启发式（判据见 data/cognition_map.json 的 rule 字段）；数据来自本地精确 LP/ILP 复算，脚本与日志在同仓库 scripts/ 与 data/ 下。</div>
+</div>
+</html>

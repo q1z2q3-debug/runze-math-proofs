@@ -83,3 +83,18 @@ https://github.com/q1z2q3-debug/runze-math-proofs
 
 MIT — see `LICENSE`.
 </content>
+
+## Cognition layer: the 三元九维 19683 lattice
+
+`docs/cognition-19683.md` (architecture, knowledge mapping, and what it says about these three
+conjectures) with `docs/cognition-19683.html` (the 9 × 3 grid figure). The lattice is 3 elements
+(form / number / principle) × 9 dimensions × 3 levels = 3⁹ = 19683 addresses; each knowledge entry
+gets a 9-trit address, and the solve step is "project the conjecture onto the lattice, read off the
+empty cells, and search only those".
+
+Executed result (`scripts/lattice_search.py` → `data/lattice_result.json`): 972 generated
+sub-lattice cells, 729 runnable at `n ≤ 14`, `dist(OPT − ⌈LP⌉) = {0: 729}`, i.e. **no hit at
+gap ≥ 1** — the form/number dimensions alone are structurally closed, and the gap has to come from
+the "multi-layer gadget" dimension, which is exactly where the OpenAI 2026 construction lives
+(and why it cannot be written as `Fin n → ℕ`). `data/cognition_map.json` holds the encoder output
+(20 domain-level entries) with the grading rule attached to every entry.

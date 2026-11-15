@@ -1,0 +1,632 @@
+{
+ "architecture": {
+  "ternary_elements": [
+   "form(象)",
+   "number(数)",
+   "principle(理)"
+  ],
+  "dims": [
+   "granularity",
+   "scale",
+   "symmetry",
+   "precision",
+   "complexity",
+   "certificate",
+   "invariant",
+   "extremal",
+   "reduction"
+  ],
+  "levels": {
+   "granularity": [
+    "continuous",
+    "discrete",
+    "item-copies"
+   ],
+   "scale": [
+    "constant",
+    "polynomial",
+    "asymptotic"
+   ],
+   "symmetry": [
+    "none",
+    "weak",
+    "strong"
+   ],
+   "precision": [
+    "exact-rational",
+    "floating",
+    "asymptotic-constant"
+   ],
+   "complexity": [
+    "linear",
+    "poly",
+    "exponential"
+   ],
+   "certificate": [
+    "constructive",
+    "dual",
+    "enumeration"
+   ],
+   "invariant": [
+    "counting",
+    "volume",
+    "algebraic-rank"
+   ],
+   "extremal": [
+    "duality",
+    "measure/prob",
+    "topology/order"
+   ],
+   "reduction": [
+    "direct",
+    "one-step",
+    "multi-layer gadget"
+   ]
+  },
+  "address_space": 19683,
+  "address": "A = sum a_i * 3^i, i=0..8",
+  "note": "grading is heuristic; each entry records its `rule` so it can be re-derived"
+ },
+ "entries": [
+  {
+   "zh": "组合优化",
+   "en": "组合优化",
+   "vector": [
+    2,
+    2,
+    1,
+    0,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "address": 9899,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "weak",
+    "exact-rational",
+    "exponential",
+    "dual",
+    "volume",
+    "measure/prob",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "线性规划/对偶",
+   "en": "LP duality",
+   "vector": [
+    2,
+    2,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "address": 7622,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "none",
+    "exact-rational",
+    "poly",
+    "dual",
+    "volume",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "代数/多项式方法",
+   "en": "polynomial method",
+   "vector": [
+    1,
+    2,
+    2,
+    0,
+    1,
+    0,
+    2,
+    2,
+    0
+   ],
+   "address": 5938,
+   "labels": [
+    "discrete",
+    "asymptotic",
+    "strong",
+    "exact-rational",
+    "poly",
+    "constructive",
+    "algebraic-rank",
+    "topology/order",
+    "direct"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "概率方法",
+   "en": "probabilistic method",
+   "vector": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "address": 10088,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "weak",
+    "floating",
+    "poly",
+    "enumeration",
+    "volume",
+    "measure/prob",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "复杂性理论",
+   "en": "complexity",
+   "vector": [
+    2,
+    2,
+    0,
+    1,
+    2,
+    1,
+    1,
+    2,
+    2
+   ],
+   "address": 18665,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "none",
+    "floating",
+    "exponential",
+    "dual",
+    "volume",
+    "topology/order",
+    "multi-layer gadget"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "数论",
+   "en": "number theory",
+   "vector": [
+    2,
+    2,
+    1,
+    0,
+    2,
+    0,
+    2,
+    2,
+    1
+   ],
+   "address": 12572,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "weak",
+    "exact-rational",
+    "exponential",
+    "constructive",
+    "algebraic-rank",
+    "topology/order",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "分析/调和",
+   "en": "analysis",
+   "vector": [
+    0,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "address": 9843,
+   "labels": [
+    "continuous",
+    "asymptotic",
+    "weak",
+    "floating",
+    "poly",
+    "dual",
+    "volume",
+    "measure/prob",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "形式化验证",
+   "en": "formal verification",
+   "vector": [
+    2,
+    0,
+    0,
+    0,
+    2,
+    2,
+    1,
+    0,
+    1
+   ],
+   "address": 7940,
+   "labels": [
+    "item-copies",
+    "constant",
+    "none",
+    "exact-rational",
+    "exponential",
+    "enumeration",
+    "volume",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "组合设计",
+   "en": "combinatorial design",
+   "vector": [
+    2,
+    1,
+    2,
+    0,
+    2,
+    2,
+    0,
+    0,
+    1
+   ],
+   "address": 7232,
+   "labels": [
+    "item-copies",
+    "polynomial",
+    "strong",
+    "exact-rational",
+    "exponential",
+    "enumeration",
+    "counting",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "装箱/调度",
+   "en": "bin packing",
+   "vector": [
+    2,
+    2,
+    0,
+    0,
+    2,
+    1,
+    1,
+    0,
+    1
+   ],
+   "address": 7703,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "none",
+    "exact-rational",
+    "exponential",
+    "dual",
+    "volume",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "配置 LP",
+   "en": "configuration LP",
+   "vector": [
+    2,
+    2,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "address": 7622,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "none",
+    "exact-rational",
+    "poly",
+    "dual",
+    "volume",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "对偶可行函数",
+   "en": "dual feasible functions",
+   "vector": [
+    2,
+    2,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "address": 7622,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "none",
+    "exact-rational",
+    "poly",
+    "dual",
+    "volume",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "整数舍入性质",
+   "en": "IRUP/MIRUP",
+   "vector": [
+    2,
+    2,
+    0,
+    0,
+    2,
+    1,
+    1,
+    0,
+    1
+   ],
+   "address": 7703,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "none",
+    "exact-rational",
+    "exponential",
+    "dual",
+    "volume",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "顶点覆盖与 LP 间隙",
+   "en": "vertex cover gap",
+   "vector": [
+    2,
+    2,
+    0,
+    0,
+    2,
+    1,
+    1,
+    1,
+    2
+   ],
+   "address": 16451,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "none",
+    "exact-rational",
+    "exponential",
+    "dual",
+    "volume",
+    "measure/prob",
+    "multi-layer gadget"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "永久式与符号",
+   "en": "permanent & signs",
+   "vector": [
+    2,
+    2,
+    2,
+    0,
+    1,
+    0,
+    2,
+    2,
+    1
+   ],
+   "address": 12500,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "strong",
+    "exact-rational",
+    "poly",
+    "constructive",
+    "algebraic-rank",
+    "topology/order",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "多项式影响与方差",
+   "en": "influence/variance",
+   "vector": [
+    1,
+    2,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    2
+   ],
+   "address": 16162,
+   "labels": [
+    "discrete",
+    "asymptotic",
+    "weak",
+    "floating",
+    "poly",
+    "constructive",
+    "volume",
+    "measure/prob",
+    "multi-layer gadget"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "伪随机与 k-wise",
+   "en": "k-wise independence",
+   "vector": [
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2
+   ],
+   "address": 16648,
+   "labels": [
+    "discrete",
+    "asymptotic",
+    "weak",
+    "floating",
+    "poly",
+    "enumeration",
+    "volume",
+    "measure/prob",
+    "multi-layer gadget"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "图同态与覆盖",
+   "en": "graph homomorphism",
+   "vector": [
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    0,
+    1,
+    2
+   ],
+   "address": 15983,
+   "labels": [
+    "item-copies",
+    "asymptotic",
+    "strong",
+    "exact-rational",
+    "exponential",
+    "enumeration",
+    "counting",
+    "measure/prob",
+    "multi-layer gadget"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "形式化 Lean/mathlib",
+   "en": "Lean formalisation",
+   "vector": [
+    2,
+    0,
+    0,
+    0,
+    2,
+    2,
+    1,
+    0,
+    1
+   ],
+   "address": 7940,
+   "labels": [
+    "item-copies",
+    "constant",
+    "none",
+    "exact-rational",
+    "exponential",
+    "enumeration",
+    "volume",
+    "duality",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  },
+  {
+   "zh": "基准与评估",
+   "en": "benchmarks",
+   "vector": [
+    2,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "address": 8861,
+   "labels": [
+    "item-copies",
+    "polynomial",
+    "none",
+    "floating",
+    "poly",
+    "constructive",
+    "counting",
+    "measure/prob",
+    "one-step"
+   ],
+   "rule": "判级按 §2.1 判据：规模看是否有统一渐近表述；证书看结论是否给出可写下对象/权重/穷举；归约深度看证明是否含 输入→输出 多层 gadget"
+  }
+ ]
+}
