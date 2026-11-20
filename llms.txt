@@ -1,0 +1,29 @@
+# 润泽数学证明：Lean 4 形式化验证与精确复算
+
+> 把开放猜想拆成可复跑的证书：定位、忠实性核查、精确复算、Lean 内核验证。
+
+Canonical repository: https://github.com/q1z2q3-debug/runze-math-proofs
+Documentation: https://q1z2q3-debug.github.io/runze-math-proofs/
+
+## What this is
+
+本仓库记录 TCSExam 开放猜想的形式化实验。当前重点是 bin-packing 的 Modified Integer Round-Up Property：在 instC 上给出 Lean core 可检查的证书，并用 39,150 个实例搜索反例。结论只写到证据允许的边界：算术已核，ℝ/ℚ 桥接仍需完整 mathlib 环境。
+
+## Entry points
+
+- GitHub: https://github.com/q1z2q3-debug/runze-math-proofs
+- 实验报告: https://github.com/q1z2q3-debug/runze-math-proofs/blob/main/docs/tcsexam-open-conjectures-report.md
+- 认知格说明: https://github.com/q1z2q3-debug/runze-math-proofs/blob/main/docs/cognition-19683.html
+
+## Citation
+
+- `CITATION.cff` in this repository
+- Author: 润泽（润泽博士）
+- Date: 2026-11-20
+- License: MIT
+
+## Machine-readable
+
+- `llms.txt` (this file)
+- `ai.txt`
+- `CITATION.cff`

@@ -1,0 +1,24 @@
+# AI usage policy for 润泽数学证明：Lean 4 形式化验证与精确复算
+
+- Repository: https://github.com/q1z2q3-debug/runze-math-proofs
+- Author: 润泽（润泽博士）
+- License: MIT
+
+## Allowed without separate permission
+
+- Search indexing, retrieval, quotation with attribution.
+- Non-commercial research and evaluation.
+- Code reuse under the repository's code license.
+
+## Requires permission
+
+- Commercial AI training or commercial redistribution of the text, where the
+  text license is CC BY-NC-SA 4.0.
+- Any use that removes attribution or presents unreviewed research as a
+  clinical, investment, or safety-certified conclusion.
+
+## Notes
+
+Code is MIT-licensed; reuse and commercial use are permitted under the MIT terms.
+
+Contact: q1z2q3@gmail.com

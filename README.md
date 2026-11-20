@@ -98,3 +98,11 @@ gap ≥ 1** — the form/number dimensions alone are structurally closed, and th
 the "multi-layer gadget" dimension, which is exactly where the OpenAI 2026 construction lives
 (and why it cannot be written as `Fin n → ℕ`). `data/cognition_map.json` holds the encoder output
 (20 domain-level entries) with the grading rule attached to every entry.
+
+<!-- research-repo-standard -->
+## 研究仓库入口
+
+- 引用：`CITATION.cff`
+- 模型入口：`llms.txt`、`ai.txt`
+- 文档页：https://q1z2q3-debug.github.io/runze-math-proofs/
+- 许可：MIT
